@@ -46,6 +46,7 @@ master.menu.authenticated.listtoolrecords = Lista de registros de herramientas
 master.menu.authenticated.listinquires = Lista de peticiones
 master.menu.authenticated.listovertures = Lista de propuestas
 master.menu.authenticated.listchallenges = Lista de desafíos
+master.menu.authenticated.listinvestmentrounds = Lista de rondas de inversión
 
 
 # master.menu.administrator ###################################################
@@ -69,6 +70,20 @@ master.menu.administrator.toolrecords.list = Lista de registros de herramientas
 master.menu.administrator.toolrecords.create = Crea un registro de herramientas
 master.menu.administrator.challenges.list = Lista de desafíos
 master.menu.administrator.challenges.create = Crea un desafío
+
+# master.menu.entrepreneur ########################################################
+
+master.menu.entrepreneur = Empresario
+master.menu.entrepreneur.favourite-link = Enlace favorito
+master.menu.entrepreneur.listmyinvestmentrounds = Mis rondas de inversión
+master.menu.entrepreneur.listmyapplications = Aplicaciones a mis rondas de inversión
+
+# master.menu.investor ########################################################
+
+master.menu.investor = Inversor
+master.menu.investor.favourite-link = Enlace favorito
+master.menu.investor.listmyapplications = Mis aplicaciones a rondas de inversión
+
 
 # master.menu.provider ########################################################
 

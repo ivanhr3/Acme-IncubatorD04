@@ -46,6 +46,7 @@ master.menu.authenticated.listtoolrecords = Tool records list
 master.menu.authenticated.listinquires = Inquires list
 master.menu.authenticated.listovertures = Overtures list
 master.menu.authenticated.listchallenges = Challenges list
+master.menu.authenticated.listinvestmentrounds = Investment rounds list
 
 # master.menu.administrator ###################################################
 
@@ -68,6 +69,19 @@ master.menu.administrator.toolrecords.list = Tool records list
 master.menu.administrator.toolrecords.create = Create a technology record
 master.menu.administrator.challenges.list = Challenges list
 master.menu.administrator.challenges.create = Create a challenge
+
+# master.menu.entrepreneur ########################################################
+
+master.menu.entrepreneur = Entrepreneur
+master.menu.entrepreneur.favourite-link = Favourite link
+master.menu.entrepreneur.listmyinvestmentrounds = My investment rounds
+master.menu.entrepreneur.listmyapplications = Applications to my investment rounds
+
+# master.menu.investor ########################################################
+
+master.menu.investor = Investor
+master.menu.investor.favourite-link = Favourite link
+master.menu.investor.listmyapplications = My applications to investment rounds
 
 # master.menu.provider ########################################################
 

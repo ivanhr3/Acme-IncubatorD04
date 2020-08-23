@@ -73,11 +73,27 @@
 			<acme:menu-suboption code="master.menu.authenticated.listovertures" action="/authenticated/overture/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.listchallenges" action="/authenticated/challenge/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.listinvestmentrounds" action="/authenticated/investment-round/list"/>
 			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.unity.com/es/learn"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.entrepreneur" access="hasRole('Entrepreneur')">
+			<acme:menu-suboption code="master.menu.entrepreneur.favourite-link" action="http://www.unity.com/es/learn"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.entrepreneur.listmyinvestmentrounds" action="/entrepreneur/investment-round/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.entrepreneur.listmyapplications" action="/entrepreneur/application/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.investor" access="hasRole('Investor')">
+			<acme:menu-suboption code="master.menu.investor.favourite-link" action="http://www.unity.com/es/learn"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.investor.listmyapplications" action="/investor/application/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
