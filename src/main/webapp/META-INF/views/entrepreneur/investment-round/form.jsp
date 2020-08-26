@@ -25,5 +25,6 @@
 	<acme:form-url code="entrepreneur.investmentround.form.label.additionalInfo" path="additionalInfo"/>
 	
 	<acme:form-submit method="get" code="entrepreneur.investmentround.form.button.workProgramme" action="/entrepreneur/activity/list?id=${id}"/>
+	<acme:form-submit method="get" code="entrepreneur.investmentround.form.button.accountingRecord" action="/entrepreneur/accounting-record/list?id=${id}"/>
 	<acme:form-return code="entrepreneur.investmentround.form.button.return"/>
 </acme:form>

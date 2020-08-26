@@ -1,4 +1,16 @@
 
+    create table `accounting_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `creation_date` datetime(6),
+        `status` varchar(255),
+        `title` varchar(255),
+        `bookkepper_id` integer not null,
+        `investment_round_id` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `activity` (
        `id` integer not null,
         `version` integer not null,
@@ -46,6 +58,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `bookkepper` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `firm_name` varchar(255),
+        `statement` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -81,6 +102,15 @@
         `sector` tinyblob,
         `skills_record` varchar(255),
         `startup_name` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `forum` (
+       `id` integer not null,
+        `version` integer not null,
+        `entrepreneur_id` integer,
+        `investment_round_id` integer not null,
+        `investor_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -131,6 +161,17 @@
         `firm_name` varchar(255),
         `profile` varchar(255),
         `sector` tinyblob,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `message` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `creation_date` datetime(6),
+        `tags` varchar(255),
+        `title` varchar(255),
+        `forum_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -256,6 +297,9 @@
     alter table `application` 
        add constraint UK_ao7wxw7e7mkj6g5q49yq2fw8d unique (`ticker`);
 
+    alter table `forum` 
+       add constraint UK_ofnp3l952r0ymjahya6fuy1xq unique (`investment_round_id`);
+
     alter table `investment_round` 
        add constraint UK_408l1ohatdkkut5bkt0eu6ifs unique (`ticker`);
 
@@ -268,6 +312,16 @@ create index IDX3eg8909lys96o3fgmgagnw6yj on `spamword` (`english_spamword`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
+
+    alter table `accounting_record` 
+       add constraint `FKrtcfotww9uu5wxrtkrimny9du` 
+       foreign key (`bookkepper_id`) 
+       references `bookkepper` (`id`);
+
+    alter table `accounting_record` 
+       add constraint `FKk1pmfnppwk0kav7xloy8u71uq` 
+       foreign key (`investment_round_id`) 
+       references `investment_round` (`id`);
 
     alter table `activity` 
        add constraint `FK1ufotopeofii4jlefyk9c7os5` 
@@ -299,6 +353,11 @@ create index IDX3eg8909lys96o3fgmgagnw6yj on `spamword` (`english_spamword`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `bookkepper` 
+       add constraint FK_j580su7lw16ga8ev628w7g33w 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
@@ -309,6 +368,21 @@ create index IDX3eg8909lys96o3fgmgagnw6yj on `spamword` (`english_spamword`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `forum` 
+       add constraint `FKktpqe11bys73dpsfgdw6u75x9` 
+       foreign key (`entrepreneur_id`) 
+       references `entrepreneur` (`id`);
+
+    alter table `forum` 
+       add constraint `FKq8ggcjgl5by5gf6l5bji632hu` 
+       foreign key (`investment_round_id`) 
+       references `investment_round` (`id`);
+
+    alter table `forum` 
+       add constraint `FK3xelgr2k24wxwrlpyn75ux9my` 
+       foreign key (`investor_id`) 
+       references `investor` (`id`);
+
     alter table `investment_round` 
        add constraint `FKkj1l8c2ftn9c65y061me6t37j` 
        foreign key (`entrepreneur_id`) 
@@ -318,6 +392,11 @@ create index IDX3eg8909lys96o3fgmgagnw6yj on `spamword` (`english_spamword`);
        add constraint FK_dcek5rr514s3rww0yy57vvnpq 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `message` 
+       add constraint `FKfwwpivgx5j4vw4594dgrw884q` 
+       foreign key (`forum_id`) 
+       references `forum` (`id`);
 
     alter table `notice_related_notices` 
        add constraint `FKqc9an4dp5k6wuis8dyx289lg2` 

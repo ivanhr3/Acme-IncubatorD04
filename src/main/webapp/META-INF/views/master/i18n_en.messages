@@ -47,6 +47,7 @@ master.menu.authenticated.listinquires = Inquires list
 master.menu.authenticated.listovertures = Overtures list
 master.menu.authenticated.listchallenges = Challenges list
 master.menu.authenticated.listinvestmentrounds = Investment rounds list
+master.menu.authenticated.listforums = Forums where I'm involved
 
 # master.menu.administrator ###################################################
 
@@ -76,6 +77,13 @@ master.menu.entrepreneur = Entrepreneur
 master.menu.entrepreneur.favourite-link = Favourite link
 master.menu.entrepreneur.listmyinvestmentrounds = My investment rounds
 master.menu.entrepreneur.listmyapplications = Applications to my investment rounds
+
+# master.menu.bookkepper ########################################################
+
+master.menu.bookkepper = Bookkepper
+master.menu.bookkepper.favourite-link = Favourite link
+master.menu.bookkepper.investmentround.listrec = My accounting recorded investment rounds
+master.menu.bookkepper.investmentround.listnonrec = My non accounting recorded investment rounds
 
 # master.menu.investor ########################################################
 
