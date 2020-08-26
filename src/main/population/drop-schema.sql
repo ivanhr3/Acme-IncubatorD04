@@ -1,4 +1,12 @@
 
+    alter table `accounting_record` 
+       drop 
+       foreign key `FKrtcfotww9uu5wxrtkrimny9du`;
+
+    alter table `accounting_record` 
+       drop 
+       foreign key `FKk1pmfnppwk0kav7xloy8u71uq`;
+
     alter table `activity` 
        drop 
        foreign key `FK1ufotopeofii4jlefyk9c7os5`;
@@ -23,6 +31,10 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
+    alter table `bookkepper` 
+       drop 
+       foreign key FK_j580su7lw16ga8ev628w7g33w;
+
     alter table `consumer` 
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
@@ -31,6 +43,18 @@
        drop 
        foreign key FK_r6tqltqvrlh1cyy8rsj5pev1q;
 
+    alter table `forum` 
+       drop 
+       foreign key `FKktpqe11bys73dpsfgdw6u75x9`;
+
+    alter table `forum` 
+       drop 
+       foreign key `FKq8ggcjgl5by5gf6l5bji632hu`;
+
+    alter table `forum` 
+       drop 
+       foreign key `FK3xelgr2k24wxwrlpyn75ux9my`;
+
     alter table `investment_round` 
        drop 
        foreign key `FKkj1l8c2ftn9c65y061me6t37j`;
@@ -38,6 +62,10 @@
     alter table `investor` 
        drop 
        foreign key FK_dcek5rr514s3rww0yy57vvnpq;
+
+    alter table `message` 
+       drop 
+       foreign key `FKfwwpivgx5j4vw4594dgrw884q`;
 
     alter table `notice_related_notices` 
        drop 
@@ -75,6 +103,8 @@
        drop 
        foreign key `FKl4fchw6w2xn4bxp2iqukjukte`;
 
+    drop table if exists `accounting_record`;
+
     drop table if exists `activity`;
 
     drop table if exists `administrator`;
@@ -85,11 +115,15 @@
 
     drop table if exists `authenticated`;
 
+    drop table if exists `bookkepper`;
+
     drop table if exists `challenge`;
 
     drop table if exists `consumer`;
 
     drop table if exists `entrepreneur`;
+
+    drop table if exists `forum`;
 
     drop table if exists `hernandez_bulletin`;
 
@@ -98,6 +132,8 @@
     drop table if exists `investment_round`;
 
     drop table if exists `investor`;
+
+    drop table if exists `message`;
 
     drop table if exists `notice`;
 

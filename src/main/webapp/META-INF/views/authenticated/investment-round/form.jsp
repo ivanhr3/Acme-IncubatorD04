@@ -24,6 +24,8 @@
 	<acme:form-money code="authenticated.investmentround.form.label.amount" path="amount"/>
 	<acme:form-url code="authenticated.investmentround.form.label.additionalInfo" path="additionalInfo"/>
 	
+	
 	<acme:form-submit method="get" code="authenticated.investmentround.form.button.workProgramme" action="/authenticated/activity/list?id=${id}"/>
+	<acme:form-submit method="get" code="authenticated.investmentround.form.button.accountingRecord" action="/authenticated/accounting-record/list?id=${id}"/>
 	<acme:form-return code="authenticated.investmentround.form.button.return"/>
 </acme:form>

@@ -47,7 +47,7 @@ master.menu.authenticated.listinquires = Lista de peticiones
 master.menu.authenticated.listovertures = Lista de propuestas
 master.menu.authenticated.listchallenges = Lista de desafíos
 master.menu.authenticated.listinvestmentrounds = Lista de rondas de inversión
-
+master.menu.authenticated.listforums = Foros donde estoy involucrado
 
 # master.menu.administrator ###################################################
 
@@ -73,14 +73,21 @@ master.menu.administrator.challenges.create = Crea un desafío
 
 # master.menu.entrepreneur ########################################################
 
-master.menu.entrepreneur = Empresario
+master.menu.entrepreneur = Empresario/a
 master.menu.entrepreneur.favourite-link = Enlace favorito
 master.menu.entrepreneur.listmyinvestmentrounds = Mis rondas de inversión
 master.menu.entrepreneur.listmyapplications = Aplicaciones a mis rondas de inversión
 
+# master.menu.bookkepper ########################################################
+
+master.menu.bookkepper = Contador/a
+master.menu.bookkepper.favourite-link = Enlace favorito
+master.menu.bookkepper.investmentround.listrec = Rondas de inversión con mis registros de contabilidad
+master.menu.bookkepper.investmentround.listnonrec = Rondas de inversión sin mis registros de contabilidad
+
 # master.menu.investor ########################################################
 
-master.menu.investor = Inversor
+master.menu.investor = Inversor/a
 master.menu.investor.favourite-link = Enlace favorito
 master.menu.investor.listmyapplications = Mis aplicaciones a rondas de inversión
 

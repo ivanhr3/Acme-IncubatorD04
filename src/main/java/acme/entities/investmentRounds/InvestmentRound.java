@@ -21,6 +21,7 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.accountingRecords.AccountingRecord;
 import acme.entities.activities.Activity;
 import acme.entities.applications.Application;
 import acme.entities.roles.Entrepreneur;
@@ -79,6 +80,11 @@ public class InvestmentRound extends DomainEntity {
 	@NotNull
 	@OneToMany(mappedBy = "investmentRound")
 	private Collection<@Valid Application>	application;
+
+	@NotNull
+	@Valid
+	@OneToMany(mappedBy = "investmentRound")
+	private Collection<AccountingRecord>	accountingRecord;
 
 
 	@Transient

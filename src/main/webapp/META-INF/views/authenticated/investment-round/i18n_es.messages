@@ -10,5 +10,6 @@ authenticated.investmentround.list.label.creationDate = Fecha de creación
 authenticated.investmentround.list.label.title = Título
 authenticated.investmentround.list.label.amount = Cantidad
 
+authenticated.investmentround.form.button.accountingRecord = Registro de contabilidad
 authenticated.investmentround.form.button.workProgramme = Programa de trabajo
 authenticated.investmentround.form.button.return = <- Volver
